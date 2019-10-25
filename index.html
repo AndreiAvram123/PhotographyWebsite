@@ -1,0 +1,311 @@
+<!doctype html>
+<!--Declare the language of the page-->
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8 ">
+  <meta name="description" content="Learn photography for free">
+  <meta name="keywords" content="photography,tutorials">
+  <meta name="author" content="Andrei Avram">
+  <!--This is used to set the viewport accordingly to the device width-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <!--Place the stylesheets in the order of their importance.The last stylesheet added will override
+  elements from the first one-->
+  <link rel="stylesheet" href="css/sharedStyles.css">
+  <link rel="stylesheet" href="css/styleHomePage.css">
+
+  <!--Link in order to use an icon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- THIS IS USED TO INCLUDE THE BOOTSTRAP IN THE FILE -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <section class="parallax page-wrapper welcome-page">
+
+    <header>
+      <!--Below is the navigation bar provided by Bootstrap. The color of the navbar is set to transparent using 
+    the class provided by Bootstrap named bg-transparent-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+
+        <!--The button is used on mobile devices in order to provide a dropdrown navigation bar -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!--This unordered list contains the items of the navigation bar-->
+          <ul class="navbar-nav" id="navigation-list">
+            <li class="nav-item"> <a class="nav-link" id="current-page-item">Home<span class="sr-only"></span></a> </li>
+            <li class="nav-item"> <a class="nav-link" href="html/Library.html">Library</a></li>
+            <li class="nav-item"> <a class="nav-link" href="html/LearnPage.html">Learn</a></li>
+            <li class="nav-item"> <a class="nav-link" href="html/AboutPage.html">About</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="html/LoginPage.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <div class="container-centered-text">
+      <h1 class="heading">Are you new to photography?</h1>
+      <h2 class="heading">We'll take you from zero to pro in no time</h2>
+    </div>
+    <a href="#content-wrapper"><img src="images/down-arrow.png" alt="down-arrow" class="next-page-icon" /> </a>
+  </section>
+
+
+  <!--The role of the content-wrapper container is to give the content 
+  of the page a width of around 90%(as described in the css file).This is important 
+  in terms of user experience-->
+  <div class="content-wrapper" id="content-wrapper">
+    <!--The purpose of the page wrapper is to give certain content a height of 100%-->
+    <section class="page-wrapper">
+      <h1>Below you can see some photos made by our users</h1>
+      <!-- Use the bootstrap class row to display a set of pictures -->
+      <!-- This is the row of pictures-->
+      <div class="row">
+  
+
+        <!-- w3schools recommends including a header element for an article
+      to emphasize the most important part  https://www.w3schools.com/tags/tag_header.asp-->
+        <article class="col-md col-lg wrapper-card">
+          <header>
+            <h2>A winter survivor</h2>
+            <p>This picture has been taked with tele-lens</p>
+          </header>
+          <div class="wrapper-image">
+            <!--Load images according to screen-->
+            <!--Apart from the attribute srcset, Mozila recommends using
+                 the sizes attribute to speed up the page loading-->
+            <img class="responsive-image" alt="A bird in a bush" src="images/highlights/highlight1.jpg" />
+            <!--This button is only shown on mobile devices,as they do not support the on hover movement-->
+            <button onclick="showSpecsTable(0)"><i class="fa fa-bars"></i></button>
+            <!--This table will be shown(only on desktop devices) when the user hovers over one image-->
+            <table>
+              <tr>
+                <td>ISO 1600</td>
+              </tr>
+              <tr>
+                <td>f/6.3</td>
+              </tr>
+              <tr>
+                <td>1/400</td>
+              </tr>
+            </table>
+          </div>
+          <!--Because we float the image, the other elements around lose their height.
+              We use the class clearfix to solve this problem-->
+          <div class="comments-area clearfix">
+            <div class="clearfix">
+              <img src="images/user-icon.png" alt="user-icon" />
+              <span><strong>Andrei</strong></span>
+              <p>She looks so lonely :(</p>
+            </div>
+            <div class="clearfix">
+              <img src="images/user-icon.png" alt="user-icon" />
+              <span><strong>Nela</strong></span>
+              <p>It's a bit noisy.</p>
+            </div>
+          </div>
+          <textarea>Post your comment here...</textarea>
+          <input type="submit" value="Post comment" />
+        </article>
+
+        <article class="col-lg col-md wrapper-card">
+          <header>
+            <h2>Cherry Blossom</h2>
+            <p>A macro picture depicting a cherry blossom in bloom.</p>
+          </header>
+          <div class="wrapper-image">
+            <img src="images/highlights/highlight2.jpg" class="responsive-image" alt="A cherry blossom in bloom" />
+            <button onclick="showSpecsTable(1)"><i class="fa fa-bars"></i></button>
+            <table>
+              <tr>
+                <td>ISO 200</td>
+              </tr>
+              <tr>
+                <td>f/5.6</td>
+              </tr>
+              <tr>
+                <td>1/100</td>
+              </tr>
+            </table>
+          </div>
+          <div class="comments-area clearfix">
+            <div class="clearfix">
+              <img src="images/user-icon.png" alt="user-icon"/>
+              <span><strong>Josh</strong></span>
+              <p>Such vibrant colours, I like it!</p>
+            </div>
+            <div class="clearfix">
+              <img src="images/user-icon.png" alt="user-icon" />
+              <span><strong>Luis</strong></span>
+              <p>Good composition.</p>
+            </div>
+          </div>
+          <textarea>Post your comment here...</textarea>
+          <input type="submit" value="Post comment" />
+        </article>
+
+        <article class="col-md col-lg wrapper-card">
+          <header>
+            <h2>Contrast</h2>
+            <p>This was meant to be a pattern-like picture.</p>
+          </header>
+          <div class="wrapper-image">
+            <img src="images/highlights/highlight3.jpg" class="responsive-image" alt="A fence with flowers" />
+            <button onclick="showSpecsTable(2)"><i class="fa fa-bars"></i></button>
+            <table>
+              <tr>
+                <td>ISO 200</td>
+              </tr>
+              <tr>
+                <td>f/5.6</td>
+              </tr>
+              <tr>
+                <td>1/60</td>
+              </tr>
+            </table>
+          </div>
+          <section class="comments-area clearfix">
+            <div class="clearfix">
+              <img src="images/user-icon.png" alt="user-icon" />
+              <span><strong>Nathan</strong></span>
+              <p>Abstract nature, beautiful</p>
+            </div>
+            <div class="clearfix">
+              <img src="images/user-icon.png" alt="user-icon"/>
+              <span><strong>Carl</strong></span>
+              <p>I like the colour combination.</p>
+            </div>
+          </section>
+          <textarea>Post your comment here...</textarea>
+          <input type="submit" value="Post comment" />
+        </article>
+
+        <article class="col-md col-lg wrapper-card">
+          <header>
+            <h2>Turda Mina - Transylvania</h2>
+            <p>For this picture I used wide angle lens</p>
+          </header>
+          <div class="wrapper-image">
+            <img src="images/highlights/highlight4.jpg" class="responsive-image" alt="Salina Turda" />
+            <button onclick="showSpecsTable(3)"><i class="fa fa-bars"></i></button>
+            <table>
+              <tr>
+                <td>ISO 3200</td>
+              </tr>
+              <tr>
+                <td>f/5.6</td>
+              </tr>
+              <tr>
+                <td>1/30</td>
+              </tr>
+            </table>
+          </div>
+          <section class="comments-area clearfix">
+            <div class="clearfix">
+              <img src="images/user-icon.png" alt="user-icon"/>
+              <span><strong>Ricards</strong></span>
+              <p>Stunning</p>
+            </div>
+
+            <div class="clearfix">
+              <img src="images/user-icon.png" alt="user-icon"/>
+              <span><strong>Arron</strong></span>
+              <p>That's a hgh contrast.</p>
+            </div>
+          </section>
+          <textarea>Post your comment here...</textarea>
+          <input type="submit" value="Post comment" />
+        </article>
+      </div>
+    </section>
+
+
+    <section class="parallax wrapper-parallax">
+    </section>
+
+
+
+    <!--This is the bottom page-->
+    <section class="page-wrapper bottom-page">
+      <h1>We'll guide you step by step in this journey. Here is how: </h1>
+      <div class="row">
+        <article class="col-lg">
+          <h2>1</h2>
+          <h3>Small tutorials</h3>
+          <p>We will give you you small,practical and manageable tutorial in order to kick start you
+            into the world of photography.</p>
+        </article>
+        <article class="col-lg">
+          <h2>2</h2>
+            <h3>Challenges</h3>
+          <p>Once you finished a tutorial, we will give you a number of challenges to complete. They are meant
+            to help you put into practice what you leaned.</p>
+        </article>
+        <article class="col-lg">
+          <h2>3</h2>
+            <h3>Feedback</h3>
+          <p>You can upload your work to our website and our team will give you personalised feedback in order
+            to help you become better.</p>
+        </article>
+
+        <article class="col-lg">
+          <h2>4</h2>
+            <h3>Repeat </h3>
+          <p>Repeat the first 3 steps over and over again until you achieve your desired goal.</p>
+        </article>
+
+      </div>
+    </section>
+    <span class="bottom-link"> <a href="html/LearnPage.html">Start learning</a></span>
+
+    <footer>
+      <!--Break down the footer into 2 section,one with developer 
+        contact options and one with the content provider -->
+      <div class="row">
+        <!--Use the class col-sm to create 
+            three equal-width columns on small, medium, large, and extra large devices -->
+        <article class="col-sm">
+          <p>Developer</p>
+          <i><a href="https://www.facebook.com/avram.andreitiberiu" target="blank" class="fa fa-facebook"></a></i>
+          <i><a href="https://github.com/AndreiAvram123" target="blank" class="fa fa-git-square"></a></i>
+          <i><a href="https://www.linkedin.com/in/andrei-avram-54776b140/" target="blank"
+              class="fa fa-linkedin "></a></i>
+          <i><a href="mailto:avramandreitiberiu@gmail.com" target="blank" class="fa fa-google "></a></i>
+        </article>
+        <article class="col-sm">
+          <p>Content provider</p>
+          <i><a href="https://www.instagram.com/nella.yall/" target="blank" class="fa fa-instagram"></a></i>
+          <i><a href="https://www.facebook.com/nela.ion.33" target="blank" class="fa fa-facebook"></a></i>
+          <i><a href="https://www.linkedin.com/in/nela-ion-657ab4178/" target="blank" class="fa fa-linkedin "></a></i>
+          <i><a href="mailto:yallenIN@yahoo.com" target="blank" class="fa fa-google "></a></i>
+        </article>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="scripts/script.js">
+  </script>
+  <!-- These scripts belong to Bootstrap and they ensure that it functions correctly   -->
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" http-equiv="Content-type" content="text/html">
+    <!--This is used to set the viewport accordingly to the device width-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="../css/sharedStyles.css">
+    <link rel="stylesheet" href="../css/AboutPageStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- THIS IS USED TO INCLUDE THE BOOTSTRAP IN THE PROJECT -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" id="navigation-list">
+                    <li class="nav-item"> <a class="nav-link" href="../index.html">Home <span
+                                class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="Library.html">Library</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="LearnPage.html">Learn</a></li>
+                    <li class="nav-item"> <a class="nav-link" id="current-page-item">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="LoginPage.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main content goes here-->
+    <section class="content-wrapper">
+        <div class="logo-wrapper">
+            <!--I am using the srcset attribute combined with the size one to
+            load correct image sizes-->
+            <img class="responsive-image" srcset="../images/logo/logo-large.jpg 600w,
+                            ../images/logo/logo-medium.jpg 400w,
+                            ../images/logo/logo-small.jpg 300w" sizes="(max-width : 992px) 400px,
+                         (max-width : 768px) 300px,
+                          600px" src="../images/logo/logo-large.jpg" alt="Yellen photography" />
+
+        </div>
+        <div class="row">
+            <article class="col-lg">
+                <!--Main section providing the name and role-->
+                <section>
+                    <h1>Content provider</h1>
+                    <h2>Nela Ion</h2>
+                </section>
+                <!--Second section providing contact details-->
+                <section>
+                    <h3>Contact details</h3>
+                    <span>Email : <a href="mailto:yallenIN@yahoo.com">yallenIN@yahoo.com</a></span>
+                    <div class="wrapper-icons">
+                        <i><a href="https://www.instagram.com/nella.yall/" target="blank"
+                                class="fa fa-instagram"></a></i>
+                        <i><a href="https://www.facebook.com/nela.ion.33" target="blank" class="fa fa-facebook"></a></i>
+                        <i><a href="https://www.linkedin.com/in/nela-ion-657ab4178/" target="blank"
+                                class="fa fa-linkedin "></a></i>
+                        <i><a href="mailto:yallenIN@yahoo.com" target="blank" class="fa fa-google "></a></i>
+                    </div>
+                </section>
+
+            </article>
+            <article class="col-lg">
+                <section>
+                    <h1>Developer</h1>
+                    <h2>Andrei Avram</h2>
+                </section>
+                <section>
+                    <h3>Contact details</h3>
+                    <span>Email : <a href="mailto:yallenIN@yahoo.com">yallenIN@yahoo.com</a></span>
+                    <!--I have wrapped them in a div to display them on the next line-->
+                    <div class="wrapper-icons">
+                        <i><a href="https://www.facebook.com/avram.andreitiberiu" target="blank"
+                                class="fa fa-facebook"></a></i>
+                        <i><a href="https://github.com/AndreiAvram123" target="blank" class="fa fa-git-square"></a></i>
+                        <i><a href="https://www.linkedin.com/in/andrei-avram-54776b140/" target="blank"
+                                class="fa fa-linkedin "></a></i>
+                        <i><a href="mailto:avramandreitiberiu@gmail.com" target="blank" class="fa fa-google "></a></i>
+                    </div>
+
+                </section>
+            </article>
+        </div>
+    </section>
+
+
+
+
+    <script src="../scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

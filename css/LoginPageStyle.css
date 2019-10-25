@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/* The !important element is used in order to make sure 
+that the background color is the desired one  */
+html,
+body {
+    background: #202427 !important;
+}
+
+.login-form {
+
+    margin: 0 auto;
+    padding: 15px;
+    color: white;
+    background: #4D575E;
+    box-shadow: #888686 0px 1px 2px;
+    border-radius: 5px;
+}
+
+.login-form h1 {
+    text-align: center;
+    color: #EDA677;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.login-form>h2 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+form input {
+
+    border: 1.5px solid #726E6E;
+    border-radius: 7px;
+    height: 5vh;
+}
+
+form label {
+    font-size: 17px;
+}
+
+form button {
+    margin-top: 25px;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.login-button {
+    background: #1080FC;
+    color: white;
+    display: block;
+}
+
+.create-account-button {
+    background: #FDC159;
+    display: block;
+}
+
+/*Target small devices*/
+@media(max-width: 768px) {
+    .login-form {
+        width: 90%;
+    }
+
+    .login-form h1 {
+        font-size: 25px;
+    }
+
+
+    /*
+    On small devices change the allignment of elements 
+    Stack them instead using display block for each one of them 
+    */
+    form label {
+        display: block;
+        text-align: center;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    form button {
+        margin-right: 5vw;
+    }
+
+    form div {
+        margin-top: 5px;
+    }
+
+}
+
+/*Target medium devices*/
+@media(min-width:768px) and (max-width:992px) {
+    form div {
+        margin-top: 25px;
+    }
+
+    .login-form {
+        width: 70%;
+    }
+}
+
+
+
+
+
+/*Target large devices */
+@media (min-width: 992px) {
+
+    .login-form {
+        margin-top: 5vh;
+    }
+
+    form div {
+        margin-top: 25px;
+    }
+
+    .login-form {
+        width: 40%;
+    }
+
+    form input {
+        margin-left: 10px;
+        width: 70%;
+    }
+
+    /* To make sure that all labels have the same size and are properly aligned we use 
+       display: inline-block and width:15%;
+    */
+    form label {
+        display: inline-block;
+        width: 15%;
+        text-align: left;
+    }
+}

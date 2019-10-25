@@ -1,0 +1,210 @@
+/* I use the attribute !important in order to override the Bootstrap rule for backgroud
+   If I don't use it, the background color is not set properly */
+body,
+html {
+  background: #212528 !important;
+}
+
+
+#heading-library {
+  font-family: Baufra;
+  text-align: center;
+
+}
+
+.wrapper-category {
+  padding: 0 !important;
+  overflow: hidden;
+  text-align: center;
+}
+
+.wrapper-category h2 {
+  z-index: 1;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/*
+    THESE ELEMETS STYLES ARE FOR THE LIGHTBOX FROM W3SCHOOLS https://www.w3schools.com/howto/howto_js_lightbox.asp
+    */
+.row>.column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(17, 17, 17, 0.9);
+
+}
+
+
+
+/* Modal Content */
+.modal-content {
+
+  position: relative;
+  margin: auto;
+  padding: 5px;
+  background: #34363B !important;
+
+}
+
+/* The Close Button */
+.close-model {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close-model:hover,
+.close-model:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+  margin: auto;
+}
+
+.mySlides img {
+  width: 100%;
+}
+
+
+
+
+/* Next & previous buttons */
+.prev-button,
+.next-button {
+
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  /* The color is inherited from somewhere else 
+    */
+  color: #FFB800 !important;
+  font-weight: bold;
+  border-radius: 0 3px 3px 0;
+
+}
+
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+/* Position the "next button" to the right */
+.next-button {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/*Target small devices using this query*/
+@media(max-width:768px) {
+  .modal-content {
+    max-width: 90%;
+    /*Override the default style display:flex with display:block 
+     to expand the modal content
+    */
+    display: block !important;
+  }
+}
+
+/*Targe medium devices using this query */
+@media(min-width:768px) and (max-width:992px) {
+  #heading-library {
+    font-size: 25px;
+    padding: 5px;
+  }
+
+  .modal {
+    padding-top: 30vh;
+  }
+
+  .wrapper-category {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+
+
+
+
+
+
+
+
+/* Targer large devices using this query */
+@media(min-width:992px) {
+  .modal-content {
+    max-width: 60%;
+  }
+
+  .wrapper-category h2 {
+    opacity: 0;
+  }
+
+  #heading-library {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .wrapper-category img {
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .wrapper-category:hover a {
+    text-decoration: none;
+  }
+
+  .wrapper-category:hover img {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+
+  .wrapper-category:hover h2 {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" http-equiv="Content-type" content="text/html">
+    <!--This is used to set the viewport accordingly to the device width-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn</title>
+    <!--Place the stylesheets in the order of their importance.The last stylesheet added will override
+  elements from the first one-->
+    <link rel="stylesheet" href="../css/sharedStyles.css">
+    <link rel="stylesheet" href="../css/LearnPageStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- THIS IS USED TO INCLUDE THE BOOTSTRAP IN THE PROJECT -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body onload="loadArticle(1)">
+    <header>
+        <div class="wrapper-layout">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" id="navigation-list">
+                        <li class="nav-item"> <a class="nav-link" href="../index.html">Home <span
+                                    class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="Library.html">Library</a></li>
+                        <li class="nav-item"> <a class="nav-link" id="current-page-item">Learn</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="AboutPage.html">About</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="LoginPage.html">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--Main content goes here-->
+    <!--This is the first article.This is static content.The other articles are loaded dynamically 
+    using JavaScript in order to avoid creating one single page for each article-->
+    <section class="content-wrapper">
+        <i class="fa fa-arrow-left " id="open-nav" onclick="openArticlesMenu()"></i>
+        <article>
+            <h1 id="article-heading"></h1>
+            <!--This div element is used to center the image-->
+            <img class="responsive-image" id="article-image" src="../images/articles/article1-large.jpg"
+                alt="Beginner with a camera" />
+            <p id="article-content">Every picture is mainly composed of 3 elements: ISO, aperture and shutter speed
+                (exposure). Tweaking those 3 you can adapt the photographic plate on which the picture is projected to
+                any situation: night photography, direct sun daylight, macro photography, landscapes and so on. Each of
+                them has their advantages and disadvantages.
+                The ISO: lowering the ISO gives you the best quality of a picture (TIP: always try to adapt the other
+                settings to the minimum ISO possible). The higher the ISO, the more noise (little granules) the picture
+                will have.
+                The Aperture: this one is giving you the depth of field: the lower the aperture, the more light will
+                enter the camera. A low aperture means a very blurry background (TIP: this is used for the macro
+                photography), while a very high aperture is giving you a sharp, detail background (TIP: this is used for
+                landscapes).
+                The shutter speed (exposure) is basically how fast the lens project the image and how much light enters
+                the camera. The faster the shutter speed (a small fraction) means that very small amount of light will
+                be projected to the photographic plate (TIP: strong light situations) while a very slow speed will allow
+                far much light to enter (TIP: dark situations).
+            </p>
+        </article>
+    </section>
+
+
+
+    <!--This is the menu where the user can select an article-->
+    <section id="article-menu">
+        <i class="fa fa-close" onclick="closeArticlesMenu()"></i>
+
+        <!-- w3schools recommends including a header element for an article
+             https://www.w3schools.com/tags/tag_header.asp-->
+        <h1>Featured articles</h1>
+        <article>
+            <header>
+                <h2><a href="#" onclick="loadArticle(1)">Camera basics</a></h2>
+            </header>
+            <p>Every picture is mainly composed of 3 elements... </p>
+        </article>
+        <article>
+            <header>
+                <h2><a href="#" onclick="loadArticle(2)">Composition</a></h2>
+            </header>
+            <p>Each photography is a composition...</p>
+
+        </article>
+        <article>
+            <header>
+                <h2><a href="#" onclick="loadArticle(3)">Long Exposure Benefits</a></h2>
+            </header>
+            <p>Long exposure is known by many as a tricky set-up...</p>
+        </article>
+        <article>
+            <header>
+                <h2><a href="#" onclick="loadArticle(4)">Adobe Lightroom CC</a></h2>
+            </header>
+            <p>Everyone loves editing,but it's not usually necessary...</p>
+        </article>
+        <article>
+            <header>
+                <h2><a href="#" onclick="loadArticle(5)">Phone Photography</a></h2>
+            </header>
+            <p>It always happens to find a good subject when you already left your camera ...</p>
+        </article>
+
+    </section>
+
+
+    <section class="wrapper-content">
+
+
+    </section>
+
+
+    <script src="../scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

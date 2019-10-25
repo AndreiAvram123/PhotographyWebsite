@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" http-equiv="Content-type" content="text/html">
+    <!--This is used to set the viewport accordingly to the device width-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!--Place the stylesheets in the order of their importance.The last stylesheet added will override
+  elements from the first one-->
+    <link rel="stylesheet" href="../css/sharedStyles.css">
+    <link rel="stylesheet" href="../css/LoginPageStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- THIS IS USED TO INCLUDE THE BOOTSTRAP IN THE PROJECT -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
+                class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="navigation-list">
+                <li class="nav-item"> <a class="nav-link" href="../index.html">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="Library.html">Library</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="LearnPage.html">Learn</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="AboutPage.html">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" id="current-page-item">Login</a> </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="content-wrapper">
+        <form class="login-form">
+            <h1>Sign in</h1>
+            <div class="first-name-wrapper">
+                <label>Forename</label>
+                <input type="text" />
+            </div>
+            <div class="surname-wrapper">
+                <label>Surname</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="text" />
+            </div>
+            <h2><a href="#">Forgot your password?</a></h2>
+            <button type="submit" class="login-button">Login</button>
+            <button type="submit" class="create-account-button">Create account</button>
+
+        </form>
+    </section>
+    <footer>
+        <!--Break down the footer into 2 section,one with developer 
+        contact options and one with the content provider -->
+        <div class="row">
+            <!--Use the class col-sm to create 
+            three equal-width columns on small, medium, large, and extra large devices -->
+            <div class="col-sm">
+                <p>Developer</p>
+                <i><a href="https://www.facebook.com/avram.andreitiberiu" target="blank" class="fa fa-facebook"></a></i>
+                <i><a href="https://github.com/AndreiAvram123" target="blank" class="fa fa-git-square"></a></i>
+                <i><a href="https://www.linkedin.com/in/andrei-avram-54776b140/" target="blank"
+                        class="fa fa-linkedin "></a></i>
+                <i><a href="mailto:avramandreitiberiu@gmail.com" target="blank" class="fa fa-google "></a></i>
+            </div>
+            <div class="col-sm">
+                <p>Content provider</p>
+                <i><a href="https://www.instagram.com/nella.yall/" target="blank" class="fa fa-instagram"></a></i>
+                <i><a href="https://www.facebook.com/nela.ion.33" target="blank" class="fa fa-facebook"></a></i>
+                <i><a href="https://www.linkedin.com/in/nela-ion-657ab4178/" target="blank"
+                        class="fa fa-linkedin "></a></i>
+                <i><a href="mailto:yallenIN@yahoo.com" target="blank" class="fa fa-google "></a></i>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

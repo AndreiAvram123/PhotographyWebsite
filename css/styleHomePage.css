@@ -1,0 +1,445 @@
+@charset "utf-8";
+
+/*In order to have a full background image 
+in the .page-wrapper we need to set the height of 
+html and body tag to 100%
+*/
+html,
+body {
+    height: 100%;
+    background: rgba(27, 27, 27, 0.95);
+}
+
+.page-wrapper {
+    height: 100%;
+}
+
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper-parallax {
+    height: 60vh;
+    margin-top: 2vh;
+}
+
+
+.container-centered-text {
+    text-align: center;
+}
+
+
+
+.container-centered-text h2 {
+    color: #63F9EE;
+    font-family: Baufra;
+    font-size: 1.8rem;
+
+}
+
+.next-page-icon {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    /* Calculate the value we need to go from the left */
+    left: calc(50vw - 30px);
+    /*Set the animation to run continuously using the infinite attribute*/
+    animation: bounce 2s infinite;
+}
+
+/*The elements or the wrapper card start here*/
+.wrapper-card {
+    text-align: center;
+    background: rgba(71, 74, 79, 0.6);
+    box-shadow: black 0px 1px 3px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* Bootstrap has a default padding value. In order to override that value 
+     we must use !important on the padding value 
+    */
+    padding: 5px !important;
+    margin-bottom: 15px;
+
+}
+
+.wrapper-card h2 {
+    color: #EDA475;
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.wrapper-card p {
+    color: #ffffff;
+    font-family: Calibri;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/* We need to set the position to relative for the image wrapper
+in order to be able to center the specification table
+  */
+
+.wrapper-image {
+    position: relative;
+}
+
+.wrapper-image>table {
+    opacity: 0;
+    transition: .5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #295396;
+    color: white;
+}
+
+
+.wrapper-image button {
+
+    background: #717F95;
+    color: white;
+    border: none;
+    /*Place the button in the right top corner*/
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    transform: translate(-90%, -5%);
+    opacity: 0;
+
+}
+
+/*I want to override the margin-left property from 
+the common styles css file */
+.fa {
+    margin-right: 0px;
+}
+
+.wrapper-image td,
+tr,
+th {
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+}
+
+.wrapper-card input {
+    box-shadow: 1px 1px 5px #1B1B1B;
+    background: #718096;
+    color: white;
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.wrapper-card input:focus {
+    outline: 0;
+}
+
+.wrapper-card textarea {
+    width: 100%;
+    background: #5F6C7F;
+    color: #ffffff;
+    resize: none;
+    padding: 5px;
+    border: 0;
+}
+
+.comments-area span {
+    padding: 0;
+    margin: 0;
+}
+
+.comments-area {
+    border: grey 2px solid;
+    background: #62676E;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: Calibri;
+    text-align: left;
+
+}
+
+
+/*Every div inside the comment-area is a comment from a user */
+.comments-area div {
+    padding-top: 10px;
+}
+
+.comments-area img {
+    float: left;
+    /* This makes sure that the images will not float one after another*/
+    clear: both;
+    padding-right: 5px;
+}
+
+
+/*The elements for the wrapper image end here*/
+
+
+/*The elements for the bottom page start here*/
+.bottom-page {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.bottom-page h2 {
+    color: #64FAEF;
+
+}
+
+.bottom-page h3 {
+    color: #EFA675;
+
+}
+
+.bottom-page p {
+    color: #4197CD;
+
+}
+
+.bottom-page article {
+    background: #393B3E;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom right, #393B3E, #3F4145);
+
+}
+
+
+.bottom-link {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.bottom-link a {
+    border-radius: 7px;
+    color: white;
+    background: #007BFF;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+/*  SOME ANNIMATIONS BELLOW */
+@keyframes hide-image {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0.3
+    }
+}
+
+@keyframes show-table {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* The following animation is used to bounce up and down 
+   the down arrow
+*/
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-40px);
+    }
+
+    60% {
+        transform: translateY(-25px);
+    }
+}
+
+
+
+/* Target small devices*/
+@media (max-width:768px) {
+
+
+    .container-centered-text {
+        margin-top: 5vh;
+    }
+
+    .container-centered-text h1 {
+        font-size: 40px;
+    }
+
+    .container-centered-text h2 {
+        font-size: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+
+    /*add more padding to the left and right of 
+     the wrapper-card */
+    .wrapper-card {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    .wrapper-image button {
+        opacity: 1;
+
+    }
+
+    .welcome-page {
+        background-image: url("../images/cover/background-welcome-small.jpg");
+    }
+
+    .wrapper-parallax {
+        background-image: url("../images/cover/background-small.jpg");
+    }
+
+    .bottom-page h3 {
+        font-size: 25px;
+    }
+
+    .bottom-page p {
+        font-size: 20px;
+    }
+
+}
+
+
+/*Target medium devices*/
+@media(min-width:768px) and (max-width:992px) {
+
+    /* This style is used to center the text in
+the middle of the page */
+    .container-centered-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+
+    }
+
+    /*Add some padding to the left and right */
+    .container-centered-text h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .wrapper-image button {
+        opacity: 1;
+
+    }
+
+    .welcome-page {
+        background-image: url("../images/cover/background-welcome-medium.jpg");
+    }
+
+    .wrapper-parallax {
+        background-image: url("../images/cover/background-medium.jpg");
+    }
+
+    .bottom-page p {
+        font-size: 25px;
+    }
+
+    .bottom-page h3 {
+        font-size: 30px;
+    }
+}
+
+
+
+
+/*Target large devices*/
+@media(min-width:992px) {
+
+    /* This style is used to center the text in
+the middle of the page */
+    .container-centered-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+
+    }
+
+    /* Increase the font size of h1 for large devices*/
+    .container-centered-text h1 {
+        font-size: 3rem;
+    }
+
+    .welcome-page {
+        background-image: url("../images/cover/background-welcome-large.jpg");
+    }
+
+    .wrapper-parallax {
+        background-image: url("../images/cover/background-large.jpg");
+    }
+
+    /* The table in the middle of the image should be shown on cover only
+    on large devices, more precisely on devices with a mouse */
+    .wrapper-image:hover table {
+        animation-name: show-table;
+        animation-duration: 1.2s;
+        /* By setting this attribute to forwards, we make sure that the animation will
+        not run continuously */
+        animation-fill-mode: forwards;
+    }
+
+    .wrapper-image:hover img {
+        animation-name: hide-image;
+        animation-duration: 1.2s;
+        /* By setting this attribute to forwards, we make sure that the animation will
+        not run continuously */
+        animation-fill-mode: forwards;
+    }
+
+
+    .bottom-page h3 {
+        font-size: 35px;
+    }
+
+    .bottom-page p {
+        font-size: 30px;
+    }
+
+}

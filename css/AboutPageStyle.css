@@ -1,0 +1,103 @@
+html,
+body {
+    background: #202427 !important;
+}
+
+
+.logo-wrapper {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+/*
+Align all the content in the center
+*/
+section {
+    text-align: left;
+}
+
+
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article {
+    background-image: linear-gradient(to bottom right, #5B5960, #5E6B7E);
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+
+}
+
+article h1 {
+    padding: 10px;
+}
+
+article p {
+    color: #EC9275;
+    font-size: 20px;
+}
+
+article h2 {
+    margin-top: 10px;
+    color: #EDA475;
+}
+
+article h3 {
+    color: #63D7F9;
+}
+
+article span {
+    color: #DFDFE6;
+}
+
+.wrapper-icons {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* Target small devices*/
+@media(max-width:768px) {
+    article {
+        margin-top: 10px;
+
+    }
+
+
+}
+
+/*Target medium devices*/
+@media(min-width:768px) and (max-width:992px) {
+    article {
+        margin-top: 10px;
+
+    }
+}
+
+
+/*Target large devices*/
+@media(min-width:992px) {
+    article {
+        margin-left: 10px;
+
+    }
+
+    article h3 {
+        font-size: 30px;
+    }
+
+    article span {
+        color: #DFDFE6;
+        font-size: 20px;
+    }
+
+}

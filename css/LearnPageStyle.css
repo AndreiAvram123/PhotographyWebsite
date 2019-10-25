@@ -1,0 +1,152 @@
+html,
+body {
+    background: #202427 !important;
+}
+
+.content-wrapper article {
+    /*Limit the width an article can take*/
+    max-width: 50%;
+}
+
+#article-heading {
+    color: #4197CD;
+    text-align: left;
+}
+
+#article-content {
+    color: white;
+}
+
+#article-menu {
+    height: 100%;
+    background: #10171C;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    overflow-x: hidden;
+
+}
+
+i {
+    position: absolute;
+    color: #935F24;
+
+    /*This is used in order to make the icon clickable */
+    cursor: pointer;
+}
+
+#article-menu>i {
+    font-size: 30px;
+    top: 1%;
+    left: 2%;
+    transform: translate(2%, 1%);
+}
+
+#open-nav {
+    font-size: 30px;
+    top: 50%;
+    right: 5%;
+    transform: translate(50%, 5%);
+}
+
+
+
+#article-menu>h1 {
+    margin-top: 10px;
+    font-size: 25px;
+    color: #946025;
+}
+
+
+article p {
+    color: white;
+
+}
+
+#article-image {
+    /* Align the image in the middle */
+    /* margin-left:auto;
+    margin-right:auto;
+    display:block; */
+    margin-left: 0px;
+
+}
+
+
+/* MEDIA QUERIES BELOW */
+
+/*Target small devices*/
+@media (max-width:768px) {
+
+
+    #article-menu {
+        width: 50%;
+        padding: 15px;
+    }
+
+    #article-menu>h1 {
+        font-size: 25px;
+        padding-bottom: 5px;
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+
+    article p {
+        line-height: 95%;
+    }
+
+    #article-heading {
+        font-size: 30px;
+    }
+
+    #article-content {
+        margin-top: 10px;
+        color: white;
+        font-size: 20px;
+    }
+}
+
+/*Target medium devices*/
+@media(min-width:768px) and (max-width:992px) {
+
+    #article-menu {
+        width: 40%;
+        padding: 15px;
+    }
+
+    #article-content {
+        margin-top: 15px;
+
+    }
+
+}
+
+
+
+/*Target large devices*/
+@media (min-width:992px) {
+
+    #article-menu {
+        width: 25%;
+        padding: 20px;
+
+    }
+
+    #article-menu>h1 {
+        margin-top: 20px;
+    }
+
+    #article-heading {
+        font-size: 40px;
+    }
+
+    #article-content {
+        margin-top: 20px;
+        color: white;
+        font-size: 25px;
+    }
+
+}
